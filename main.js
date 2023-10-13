@@ -1,13 +1,11 @@
 console.log('connected')
 
-// let calcData = []
+let calculation = []
 
 const buttons = document.querySelectorAll('button');
 // we are selecting ALL the button elements
 
-
-for(let button of buttons) {
-    button.addEventListener('click', (event) => {
+function clickButton(button) {
     // we are actively 'listening'/ watching for an event of 'click'
         console.log(event)
     // we are displaying that 'click' in the console when it happens
@@ -19,9 +17,26 @@ for(let button of buttons) {
             displayElement.value = button.innerText
     //our display variable is now the button HTML's inner text 
     
-    console.log(displayElement)
 
-        
-    }) 
-    }
+    calculate(button)
+
+    function calculate(button){
+    // we created a function
+        const value = button.textContent
+    //assinged a variable of value and used textContent -- a property used to set or get text content
+        calculation.push(value)
+    //pushed it into our empty array above -- 'let calculation'
+        displayElement.value = calculation
+    // and now will display it, to show what's happening on the screen
+        console.log(calculation)
     
+    }
+
+    }
+
+for(let button of buttons) {
+    button.addEventListener('click', ()=> clickButton(button))
+
+}
+    
+  
