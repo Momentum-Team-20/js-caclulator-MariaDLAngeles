@@ -1,6 +1,7 @@
 console.log('connected')
 
 let calculation = []
+let fullCalculation
 
 const buttons = document.querySelectorAll('button');
 // we are selecting ALL the button elements
@@ -26,9 +27,13 @@ function clickButton(button) {
     //assinged a variable of value and used textContent -- a property used to set or get text content
         calculation.push(value)
     //pushed it into our empty array above -- 'let calculation'
-        displayElement.value = calculation
+    fullCalculation = calculation.join('');
+    // we are using .join to have all the numbers displayed as one big unit instead of separated by ,'s -- .join -> returns a new string by concatenating all of the elements in this array
+    displayElement.value = fullCalculation
     // and now will display it, to show what's happening on the screen
-        console.log(calculation)
+    
+    
+    console.log(calculation)
     
     }
 
