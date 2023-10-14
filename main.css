@@ -6,15 +6,12 @@
     
 }
 
-
-
 .clear-and-display {
     display: grid;
     grid-template-columns:  100px 1fr;
     grid-template-rows: 100px;
     text-align: right;
-    row-gap: 2px;
-
+    row-gap: 1px;
     
 }
 
