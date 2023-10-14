@@ -25,19 +25,22 @@ function clickButton(button) {
     // we created a function
         const value = button.textContent
     //assinged a variable of value and used textContent -- a property used to set or get text content
-        calculation.push(value)
+
+    
+    calculation.push(value)
     //pushed it into our empty array above -- 'let calculation'
     fullCalculation = calculation.join('');
     // we are using .join to have all the numbers displayed as one big unit instead of separated by ,'s -- .join -> returns a new string by concatenating all of the elements in this array
     displayElement.value = fullCalculation
     // and now will display it, to show what's happening on the screen
     
-    
-    console.log(calculation)
-    
+    if(value === "C") {
+        calculation = []
+        displayElement.value = '' 
     }
-
     }
+    
+}
 
 for(let button of buttons) {
     button.addEventListener('click', ()=> clickButton(button))
