@@ -7,7 +7,7 @@ const buttons = document.querySelectorAll('button');
 
 function clickButton(button) {
         // console.log(event)
-        console.log(button.innerText)
+        // console.log(button.innerText)
         let displayElement = document.querySelector('#display')
         displayElement.value = button.innerText
     
@@ -28,9 +28,16 @@ function clickButton(button) {
         // we are using .join to have all the numbers displayed as one big unit instead of separated by ,'s -- .join -> returns a new string by concatenating all of the elements in this array
         displayElement.value = fullCalculation
         }
-    }
     
+    if(value === "!") {
+        displayElement.value = "Oh no! A ghost!"
+        console.log(button.innerText)
+        console.log(displayElement.value)
+    }  
+
+    }
 }
+
 
 for(let button of buttons) {
     button.addEventListener('click', ()=> clickButton(button))
