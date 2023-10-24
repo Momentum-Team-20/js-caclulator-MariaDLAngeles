@@ -8,16 +8,16 @@
 
 .clear-and-display {
     display: grid;
-    grid-template-columns:  100px 50px 1fr;
+    grid-template-columns:  100px 50px 250px;
     grid-template-rows: 100px;
     text-align: right;
     row-gap: 1px;
     
 }
 
-#display {
+/* #display {
     font-size: larger;
-}
+} */
 
 .numbers-and-operators {
     display: grid;
@@ -27,3 +27,20 @@
 
 }
 
+.flip-calc-ghost {
+    clip-path: inset(478px 210px 478px 210px);
+    margin: -478px -210px;
+}
+/* 
+/* img {
+    /* margin: -475px 0px 0px -225px; */
+/* } */
+
+/* .flip-calc-ghost { */
+    /* 820 x  1456*/
+    /* clip-path: inset(210px 478px ); */
+    /* border: 2px solid black;
+    width: 400px;
+    height: 500px;
+    overflow: hidden; */
+/* } */

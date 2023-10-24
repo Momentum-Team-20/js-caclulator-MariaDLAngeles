@@ -5,6 +5,15 @@ let fullCalculation
 
 const buttons = document.querySelectorAll('button');
 
+function deleteCalculator() {
+    let entireCalculator = document.getElementById('entire-calculator')
+    let ghostImage = document.createElement('img')
+    ghostImage.src = "https://i.pinimg.com/1200x/2d/2e/2b/2d2e2b66c36b0bc343a4b6857ef8c913.jpg"
+    ghostImage.classList.add("flip-calc-ghost")
+    entireCalculator.innerHTML = []
+    entireCalculator.appendChild(ghostImage)
+  }
+
 function clickButton(button) {
         // console.log(event)
         // console.log(button.innerText)
@@ -29,11 +38,14 @@ function clickButton(button) {
         displayElement.value = fullCalculation
         }
     
+        // this if block is for the fancy ghost flip, if we can add a click before the spin that'll be even cooler
     if(value === "!") {
-        displayElement.value = "Oh no! A ghost!"
+        deleteCalculator()
+        // displayElement.value = "Oh no! A ghost!"
         console.log(button.innerText)
-        console.log(displayElement.value)
-    }  
+        // console.log(displayElement.value)
+
+    } 
 
     }
 }
