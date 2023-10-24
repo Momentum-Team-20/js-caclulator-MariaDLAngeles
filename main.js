@@ -5,8 +5,8 @@ let fullCalculation
 
 const buttons = document.querySelectorAll('button');
 
-// this function clears the entire contents of our calculator and replaces it with our ghost image -- it's almost identical to how we did it in myTunes
 
+// this function clears the entire contents of our calculator and replaces it with our ghost image
 function deleteCalculator() {
     let entireCalculator = document.getElementById('entire-calculator')
     let ghostImage = document.createElement('img')
@@ -15,19 +15,11 @@ function deleteCalculator() {
     entireCalculator.innerHTML = []
     entireCalculator.appendChild(ghostImage)
     ghostImage.addEventListener('click',()=>
-        console.log('Ghost click!')
-        // after this we want to run a function to reset our calculator
-    )}
-
-
-  // this function is to flip back from our ghost to our calculator
-  function resetCalculator() {
-      console.log("I'm not scared anymore")
-
-
-}  
-
-
+        console.log('Ghost click!'))
+        setTimeout(() => location.reload(), 3000)
+// location.reload() is a function used to refresh your page in the browser
+//  setTimeout() delays our page from reloading for about 3 seconds
+    }
 
 
 function clickButton(button) {
