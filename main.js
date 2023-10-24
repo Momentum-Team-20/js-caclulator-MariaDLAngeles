@@ -14,7 +14,21 @@ function deleteCalculator() {
     ghostImage.classList.add("flip-calc-ghost")
     entireCalculator.innerHTML = []
     entireCalculator.appendChild(ghostImage)
-  }
+    ghostImage.addEventListener('click',()=>
+        console.log('Ghost click!')
+        // after this we want to run a function to reset our calculator
+    )}
+
+
+  // this function is to flip back from our ghost to our calculator
+  function resetCalculator() {
+      console.log("I'm not scared anymore")
+
+
+}  
+
+
+
 
 function clickButton(button) {
         // console.log(event)
@@ -40,7 +54,7 @@ function clickButton(button) {
         displayElement.value = fullCalculation
         }
     
-        // this if block is for the fancy ghost flip, if we can add a click before the spin that'll be even cooler
+        // this block is for the fancy ghost flip, if we can add a click before the spin that'll be even cooler
     if(value === "!") {
         deleteCalculator()
         // displayElement.value = "Oh no! A ghost!"
@@ -58,4 +72,3 @@ for(let button of buttons) {
 
 }
     
-  
