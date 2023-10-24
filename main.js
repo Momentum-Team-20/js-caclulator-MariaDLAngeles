@@ -5,6 +5,8 @@ let fullCalculation
 
 const buttons = document.querySelectorAll('button');
 
+// this function clears the entire contents of our calculator and replaces it with our ghost image -- it's almost identical to how we did it in myTunes
+
 function deleteCalculator() {
     let entireCalculator = document.getElementById('entire-calculator')
     let ghostImage = document.createElement('img')
